@@ -56,49 +56,55 @@
 	  	<h5>Guia de inicio Git</h5>
 
 	  	<ol>
-	  		<li>1) Crear una carpeta en la pc, puede ser en el escritorio, por ejemplo MyProyecto_01</li>
-	  		<li>2) Abrir con el editor de código (o un IDE tipo VSCode) el proyecto, agregar un archivo HTML, 
-	  		por ejemplo Prueba1.html, guardar.</li>
-	  		<li>3) Para inicializar el proyecto, con Git Bash. Nos posicionamos sobre la carpeta.
+	  		<li>Crear una carpeta en la pc, puede ser en el escritorio, por ejemplo MyProyecto_01
+	  		</li>
+	  		<li>Abrir con el editor de código (o un IDE tipo VSCode) el proyecto, agregar un archivo HTML, por ejemplo Prueba1.html, guardar.</li>
+	  		<li>Para inicializar el proyecto, con Git Bash. Nos posicionamos sobre la carpeta.
 	  		Pulsar Botón derecho del mouse : elegir opción Git Bash here.</li>
-	  		<li>4) Si ejecutamos el comando ls nos muestra el contenido de la carpeta</li>
-	  		<li>5) Para saber en que directorio nos encontramos : escribir pwd y presionar enter</li>
-	  		<li>6) git init (crea un nuevo respositorio git sobre el proyecto</li>
-	  		<li>7) Vinculamos el repositorio a una cuenta con el nombre del desarrollador, asi cuando realizamos
-	  		commit queda registrado
+	  		<li>Si ejecutamos el comando ls nos muestra el contenido de la carpeta</li>
+	  		<li>Para saber en que directorio nos encontramos : escribir pwd y presionar enter</li>
+	  		<li>Para iniciar un repositorio local, ejecutar: <strong> git init </strong>(crea un nuevo respositorio git sobre el proyecto</li>
+	  		<li>Vincular el repositorio a una cuenta con el nombre del desarrollador, asi cuando 
+	  			se realizan commit queda registrado
+	  		   <pre>
              git commit –global user.name “xxxx@xxxxxx.com.ar”
-             git commit –global user.name “NOMBRE”</li>
-	  		<li>8) Ahora vemos en que estado están los proyectos del directorio con git status</li>
-	  		<li>9) Vamos a agregar el archivo prueba1.html a nuestro repositorio local con
-	  		git add Prueba1.html</li>
-	  		<li>10) Si queres verificar el estado volves a ejecutar git status Vamos a crear 
-	  		un primer punto de partida git commit -m “Mi primer commit”</li>
-	  		<li>11) Con git log se pueden ver los cambios del commit </li>
+             git commit –global user.name “NOMBRE”
+           </pre>
+         </li>
+	  		<li>Para ver en que estado están los proyectos del directorio, ejecutar: 
+	  		<strong>git status</strong></li>
+	  		<li>Para agregar el archivo prueba1.html al repositorio local ejecutar
+	  			<strong> git add Prueba1.html</strong></li>
+	  		<li>Para verificar el estado del repositorio al ejecutar git status, crear un 
+	  			primer punto de partida ejecutando <strong> git commit -m “Mi primer commit”</strong>
+	  	</li>
+	  		<li>Para ver los cambios del commit, ejecutar: <strong> git log </strong> </li>
 	  	</ol>
 
+      <br>
+      
 	  	<h5>Creación de Repositorio Remoto en GitHub</h5>
-
-	  	<p>AHORA NOS VAMOS A UN REPOSITORIO REMOTO -> GITHUB</p>
 
       <h5>En la página GitHub - https://github.com</a></h5>
 
       <ol>
-      	<li>1) En Mis repositorios -> New (nuevo) -> Nombre (aquí por ejemplo poner PRUEBA). Tambien se puede agregar una descripción y se puede marcar dicho repositorio como PUBLICO</li>
-      	<li>2) Ahora tenemos que traer el proyecto que creamos anteriormente y asi compartirlo.
-      	<p>Ejecutamos:  git remote add origin https://github.com/userxxxxx/Prueba.git (esta línea la obtenes de los comandos que nos ofrece la app)</p>
+      	<li>En Mis repositorios -> New (nuevo) -> Nombre (aquí por ejemplo poner RepoPrueba). Tambien se puede agregar una descripción y se puede marcar dicho repositorio como público</li>
+      	<li>Ahora hay que traer el proyecto que creamos anteriormente y asi compartirlo.
+      	<p>Ejecutar:  git remote add origin https://github.com/nombreUsuarioGitHub/RepoPrueba.git (esta línea la obtenes de los comandos que nos ofrece la app)</p>
       	<p>Pegamos dicho código en la consola y queda relacionado el proyecto a un repositorio 
-          remoto. ESTO LO EJECUTAMOS UNA SOLA VEZ!</p>      		
+          remoto. Esto se ejecuta una sola vez!</p>      		
           </li>
-      	<li>3) Luego vamos a copiar los cambios con la opción git push -u origin master (o main si la definiste con este último nombre). Si vas a Github podras ver el repositorio remoto con contenido.</li>      	
+      	<li>Luego, para subir los cambios hechos en el repositorio local, con la siguiente instrucción:  git push -u origin master (o main si está definida con este último nombre). Si se ingresa a Github se puede ver el repositorio remoto con el contenido agregado.</li>      	
       </ol>
 
 	  	<div>
-	  		<h6>PARA MANEJAR RAMAS:</h6>
+	  		<h5>Manejo de ramas en GitHub:</h5>
 	  		
-	  		<p>En github podemos crear una rama o Branch para poder comenzar a trabajar.</p>
+	  		<p>En github se puede crear una rama o Branch para poder comenzar a trabajar.</p>
 	  		<p>Por ejemplo si tuviéramos la rama master -> Find or create Branch -> develop ->create brach</p>
 	  		<p> Esta opción copia todo el contenido de la rama master a develop.</p>
-	  		<p>Si se realizan cambios en develop y luego quiero que los cambios se actualicen</p>
+	  		<p>Si se realizan cambios en develop y luego quiero que los cambios se actualicen, 
+	  		ejecutar las siguientes instrucciones.</p>
 	  		<p> COMPARE and pull request</p>
 	  		<p> Merge Pull request</p>
 	  		<p> Confirm</p>       

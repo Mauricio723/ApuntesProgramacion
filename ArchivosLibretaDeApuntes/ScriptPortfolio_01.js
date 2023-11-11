@@ -41,13 +41,9 @@
       
       function agregarDatosPersonales(evento) {
         elementoParrafo_01.innerHTML= "<strong>Datos Personales</strong><ul>" + 
-        "<li>DNI: ********************************************</li>" + 
-        "<li>Nacionalidad: ***********************************</li>" + 
-        "<li>Domicilio Actual: *******************************</li>" +
-        "<li>Ciudad: *****************************************</li>" +
-        "<li>Provincia: **************************************</li>" +
-        "<li>Pa&iacute;s: *******************************************</li>" +
-        "<li>Tel&eacute;fono: ***************************************</li>" +
+        "<li>Nombre: Salvador Mauricio</li>" +
+        "<li>Ubicación -  Ciudad: Rada Tilly - Provincia: Chubut</li>" +
+        "<li>Pa&iacute;s: Argentina</li>" +        
         "</ul>";
         
       } 

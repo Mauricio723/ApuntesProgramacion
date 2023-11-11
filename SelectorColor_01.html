@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+  <head>  
+      
+    <meta charset="utf-8">   
+    <!-- <meta charset="ISO-8859-1">  -->            
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
+
+    <title>Selectores de Colores</title>
+	  
+	<!--  
+    <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
+    -->
+	<script>
+
+		function obtenerColorFondo() {
+			let colorSeleccionado = document.getElementById("selectColorFondo");
+
+      cambiarColorFondo(colorSeleccionado.value);
+
+		}
+		function obtenerColorTexto() {
+			let colorSeleccionado = document.getElementById("selectColorTexto");
+	  
+
+      cambiarColorTexto(colorSeleccionado.value);
+
+		}
+
+		function cambiarColorFondo(colorFondoObtenido) {
+			let variableColor_01 = document.documentElement;
+			variableColor_01.style.setProperty("--colorFondo_01", colorFondoObtenido);
+		}
+
+		function cambiarColorTexto(colorTextoObtenido) {
+			let variableColor_01 = document.documentElement;
+			variableColor_01.style.setProperty("--colorTexto_01", colorTextoObtenido);
+		}
+	
+	  function clickColorSpan(colorSpanSeleccionado, valorPropiedad) {
+      
+	  	let variableColorSpan = document.documentElement;
+	  	
+	  	if (valorPropiedad == "fondo") {
+	  		variableColorSpan.style.setProperty("--colorFondo_01", colorSpanSeleccionado);
+	  	}
+
+	  	if (valorPropiedad == "texto") {
+	  		variableColorSpan.style.setProperty("--colorTexto_01", colorSpanSeleccionado);
+	  	}
+	  	
+	  }
+   
+    function obtenerColorSelectDos() {
+    	let elementoSelectChange = document.getElementById("selectFondoVar02");
+
+    	let variableColorSelectDos = document.documentElement;
+
+      variableColorSelectDos.style.setProperty("--colorSelectFondo", elementoSelectChange.value);
+      variableColorSelectDos.style.setProperty("--colorFondo_01", elementoSelectChange.value);
+
+    }
+
+    function clickSeleccionConA() {
+    	alert("Dentro de función clickSeleccionConA");
+    }
+
+	</script>
+
+	<style>	
+		:root {
+			--colorFondo_01: rgb(200,200,200);
+			--colorTexto_01:  rgb(50,50,50);
+			--colorSelectFondo:  rgb(170,170,170);
+			--colorSelectTexto:  rgb(100,100,100);
+		}
+
+	  .divPrincipal {
+	  	
+	  	margin: 5px;
+	  	padding: 20px;
+	  	border: 1px solid black;
+	  }	
+	  .divSeccion01 {
+	  	margin: 5px;
+	  	padding: 10px;
+	  	border: 1px solid black;
+	  }
+	  .divSecciones02 {
+	  	margin: 5px;
+	  	padding: 10px;
+	  	border: 1px solid black;
+	  }
+
+    .divColumna01 {
+    	margin: 5px;
+    	padding: 20px;
+    	border:  1px solid black;
+    }
+
+	  .estiloPruebaVariable {
+	  	background-color: var(--colorFondo_01, "pink");
+	  	color: var(--colorTexto_01, "red");
+	  }
+		
+	</style>	
+
+  </head>
+  <body class="px-1" >
+  
+  <div class="divPrincipal">
+
+  	<h4 class="text-center">Página para crear un selector de colores</h4>
+    
+    <br>
+
+    <div class="divSeccion01 estiloPruebaVariable">
+
+    	<h4>Espacio para probar estilos</h4>
+    	<p>Párrafo para pruebas de estilos con variables</p>
+    </div>
+
+  	<diV class="divSeccion01">
+
+  		<h4>Opción 01 - Usando Select</h4>
+
+  		<div class="row">
+
+  			<div class="col divColumna01">
+  			<h4>Color Fondo</h4>
+
+  			<select id="selectColorFondo" onChange="obtenerColorFondo()" class="">
+
+  			<option value="rgb(255,0,0)" >Color Rojo</option>
+  			<option value="rgb(0,255,0)">Color Verde</option>
+  			<option value="rgb(0,0,255)">Color Azul</option>
+  			<option value="rgb(0,0,0)">Color Negro</option>
+  			<option value="rgb(255,255,255)">Color Blanco</option>
+
+  		</select>
+  			
+
+  		</div>
+
+  		<div class="col divColumna01">
+  			<h4>Color Texto</h4>
+  			<select id="selectColorTexto" onChange="obtenerColorTexto()" class="">
+
+  			<option value="rgb(255,0,0)">Color Rojo</option>
+  			<option value="rgb(0,255,0)">Color Verde</option>
+  			<option value="rgb(0,0,255)">Color Azul</option>
+  			<option value="rgb(0,0,0)">Color Negro</option>
+  			<option value="rgb(255,255,255)">Color Blanco</option>
+
+  		</select>  			
+
+  		</div>
+  			
+  		</div>
+		 		
+  		
+  	</diV>
+
+  	<div class="divSeccion01">
+
+  		<h4 class="text-center">Opción 02 - Usando etiquetas Span</h4>
+  		<h5 class="text-center">Con estilo en línea para el color del fondo de la etiqueta</h5>
+
+    <div class="row divSecciones02">
+
+      <div class="col divColumna01">
+
+      	<h5 class="text-center">Color Fondo</h5>
+      	<br>
+
+      	<span style="background-color:rgb(233, 87, 43);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(233, 87, 43)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(171, 65, 32);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(171, 65, 32)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(112, 51, 32);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(112, 51, 32)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(229, 187, 40);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(229, 187, 40)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(148, 125, 42);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(148, 125, 42)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(200, 185, 131);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(200, 185, 131)','fondo')" class="ms-2 px-3 py-2"></span>
+      
+      <br><br>
+
+    	<span style="background-color:rgb(201, 228, 38);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(201, 228, 38)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(136, 150, 55);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(136, 150, 55)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(108, 218, 34);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(108, 218, 34)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(65, 109, 36);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(65, 109, 36)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(181, 209, 161);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(181, 209, 161)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(37, 203, 116);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(37, 203, 116)','fondo')" class="ms-2 px-3 py-2"></span>
+
+      <br><br>
+
+    	<span style="background-color:rgb(156, 214, 184);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(156, 214, 184)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(28, 69, 48);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(28, 69, 48)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(41, 141, 214);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(41, 141, 214)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(137, 192, 232);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(137, 192, 232)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(24, 61, 89);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(24, 61, 89)','fondo')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(34, 63, 190);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(34, 63, 190)','fondo')" class="ms-2 px-3 py-2"></span>
+      	
+      </div>
+
+      <div class="col divColumna01">
+
+      	<h5 class="text-center">Color Texto</h5>
+      	<br>
+
+      	<span style="background-color:rgb(233, 87, 43);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(233, 87, 43)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(171, 65, 32);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(171, 65, 32)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(112, 51, 32);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(112, 51, 32)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(229, 187, 40);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(229, 187, 40)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(148, 125, 42);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(148, 125, 42)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(200, 185, 131);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(200, 185, 131)','texto')" class="ms-2 px-3 py-2"></span>
+      
+      <br><br>
+
+    	<span style="background-color:rgb(201, 228, 38);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(201, 228, 38)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(136, 150, 55);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(136, 150, 55)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(108, 218, 34);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(108, 218, 34)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(65, 109, 36);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(65, 109, 36)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(181, 209, 161);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(181, 209, 161)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(37, 203, 116);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(37, 203, 116)','texto')" class="ms-2 px-3 py-2"></span>
+      
+      <br><br>
+
+    	<span style="background-color:rgb(156, 214, 184);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(156, 214, 184)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(28, 69, 48);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(28, 69, 48)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(41, 141, 214);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(41, 141, 214)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(137, 192, 232);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(137, 192, 232)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(24, 61, 89);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(24, 61, 89)','texto')" class="ms-2 px-3 py-2"></span>
+
+    	<span style="background-color:rgb(34, 63, 190);cursor:pointer;" 
+    	onClick="clickColorSpan('rgb(34, 63, 190)','texto')" class="ms-2 px-3 py-2"></span>
+      	
+      </div>    	  	
+
+
+    </div>
+
+  	</div>
+
+  	<div class="divSecciones02">
+
+  		<h4>Prueba de selección de colores con etiquetas a</h4>
+  		<h5>Muestra de color con caracter ASCII 219</h5>
+
+  		<div>
+
+  			<a style="color:rgb(233, 87, 43);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(233, 87, 43)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(171, 65, 32);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(171, 65, 32)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(112, 51, 32);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(112, 51, 32)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(229, 187, 40);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(229, 187, 40)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(148, 125, 42);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(148, 125, 42)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(200, 185, 131);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(200, 185, 131)','texto')" class="ms-1">██</a>
+      
+      <br>
+
+    	<a style="color:rgb(201, 228, 38);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(201, 228, 38)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(136, 150, 55);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(136, 150, 55)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(108, 218, 34);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(108, 218, 34)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(65, 109, 36);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(65, 109, 36)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(181, 209, 161);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(181, 209, 161)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(37, 203, 116);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(37, 203, 116)','texto')" class="ms-1">██</a>
+      
+      <br>
+
+    	<a style="color:rgb(156, 214, 184);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(156, 214, 184)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(28, 69, 48);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(28, 69, 48)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(41, 141, 214);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(41, 141, 214)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(137, 192, 232);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(137, 192, 232)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(24, 61, 89);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(24, 61, 89)','texto')" class="ms-1">██</a>
+
+    	<a style="color:rgb(34, 63, 190);cursor:pointer;font-size:1.2em;" 
+    	onClick="clickColorSpan('rgb(34, 63, 190)','texto')" class="ms-1">██</a>
+
+  		</div>
+  	</div>
+
+  	<div class="divSecciones02">
+
+  		<h4>Prueba con select + caracter ascii 219 </h4>
+
+  			<div class="row">
+
+  			<div class="col divColumna01">
+  			<h4>Color Fondo</h4>
+
+  			<select id="selectFondoVar02" onChange="obtenerColorSelectDos()" class=""
+  			style="background-color:var(--colorSelectFondo,'white');">
+
+  			<option value="rgb(255,0,0)" 
+  			style="background-color: var(--colorSelectFondo);color:rgb(255,0,0);" >
+  		  ████ Rojo</option>
+  			<option value="rgb(0,255,0)" 
+  			style="background-color:var(--colorSelectFondo);color:rgb(0,255,0);">
+  		  ████ Verde</option>
+  			<option value="rgb(0,0,255)" 
+  			style="background-color:var(--colorSelectFondo);color:rgb(0,0,255);">
+  		  ████ Azul</option>
+  			<option value="rgb(0,0,0)" 
+  			style="background-color:var(--colorSelectFondo);color:rgb(0,0,0);">
+  		  ████ Negro</option>
+  			<option value="rgb(255,255,255)" 
+  			style="background-color:var(--colorSelectFondo);color:rgb(255,255,255);">
+  		  ████ Blanco</option>
+
+  		</select>
+  			
+
+  		</div>
+
+  		<div class="col divColumna01">
+  			<h4>Color Texto</h4>
+  			<select id="selectColorTexto" onChange="obtenerColorTexto()" class="">
+
+  			<option value="rgb(255,0,0)">Color Rojo</option>
+  			<option value="rgb(0,255,0)">Color Verde</option>
+  			<option value="rgb(0,0,255)">Color Azul</option>
+  			<option value="rgb(0,0,0)">Color Negro</option>
+  			<option value="rgb(255,255,255)">Color Blanco</option>
+
+  		</select>  			
+
+  		</div>
+  			
+  		</div>
+
+  	
+  		
+  	</div>
+
+  </div>
+	
+	
+	<!--
+    <script src="bootstrap-5.0.1-dist\js/bootstrap.bundle.min.js"></script>
+    -->
+	<script src="ArchivosLibretaDeApuntes\Bootstrap_01\bootstrap.bundle.min.js"></script>
+	
+  </body>
+</html>
