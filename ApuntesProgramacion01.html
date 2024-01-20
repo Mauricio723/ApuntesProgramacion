@@ -8,7 +8,7 @@
     
     <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
 
-    <title>Apuntes Programación</title>
+    <title>Apuntes Programación 01</title>
 	  
 	<!--  
     <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
@@ -45,116 +45,44 @@
 	
 	<div class="container-fluid ">
 
-      <div class="border mx-1 my-1 px-2 py-2">
-	      <h5> Apuntes de Programación</h5>
-	  </div>	
+        <div class="border mx-1 my-1 px-2 py-2">
+	        <h4 class="text-center"> Apuntes de Programación</h4>
+	    </div>	
 
-	  <div class="border mx-1 my-1 px-2 py-2">
-	  	
-	  	<h5>Apuntes GIT / GITHUB</h5>
-	  	
-	  	<h5>Guia de inicio Git</h5>
-
-	  	<ol>
-	  		<li>Crear una carpeta en la pc, puede ser en el escritorio, por ejemplo MyProyecto_01
-	  		</li>
-	  		<li>Abrir con el editor de código (o un IDE tipo VSCode) el proyecto, agregar un archivo HTML, por ejemplo Prueba1.html, guardar.</li>
-	  		<li>Para inicializar el proyecto, con Git Bash. Nos posicionamos sobre la carpeta.
-	  		Pulsar Botón derecho del mouse : elegir opción Git Bash here.</li>
-	  		<li>Si ejecutamos el comando ls nos muestra el contenido de la carpeta</li>
-	  		<li>Para saber en que directorio nos encontramos : escribir pwd y presionar enter</li>
-	  		<li>Para iniciar un repositorio local, ejecutar: <strong> git init </strong>(crea un nuevo respositorio git sobre el proyecto</li>
-	  		<li>Vincular el repositorio a una cuenta con el nombre del desarrollador, asi cuando 
-	  			se realizan commit queda registrado
-	  		   <pre>
-             git commit –global user.name “xxxx@xxxxxx.com.ar”
-             git commit –global user.name “NOMBRE”
-           </pre>
-         </li>
-	  		<li>Para ver en que estado están los proyectos del directorio, ejecutar: 
-	  		<strong>git status</strong></li>
-	  		<li>Para agregar el archivo prueba1.html al repositorio local ejecutar
-	  			<strong> git add Prueba1.html</strong></li>
-	  		<li>Para verificar el estado del repositorio al ejecutar git status, crear un 
-	  			primer punto de partida ejecutando <strong> git commit -m “Mi primer commit”</strong>
-	  	</li>
-	  		<li>Para ver los cambios del commit, ejecutar: <strong> git log </strong> </li>
-	  	</ol>
-
-      <br>
-      
-	  	<h5>Creación de Repositorio Remoto en GitHub</h5>
-
-      <h5>En la página GitHub - https://github.com</a></h5>
-
-      <ol>
-      	<li>En Mis repositorios -> New (nuevo) -> Nombre (aquí por ejemplo poner RepoPrueba). Tambien se puede agregar una descripción y se puede marcar dicho repositorio como público</li>
-      	<li>Ahora hay que traer el proyecto que creamos anteriormente y asi compartirlo.
-      	<p>Ejecutar:  git remote add origin https://github.com/nombreUsuarioGitHub/RepoPrueba.git (esta línea la obtenes de los comandos que nos ofrece la app)</p>
-      	<p>Pegamos dicho código en la consola y queda relacionado el proyecto a un repositorio 
-          remoto. Esto se ejecuta una sola vez!</p>      		
-          </li>
-      	<li>Luego, para subir los cambios hechos en el repositorio local, con la siguiente instrucción:  git push -u origin master (o main si está definida con este último nombre). Si se ingresa a Github se puede ver el repositorio remoto con el contenido agregado.</li>      	
-      </ol>
-
-	  	<div>
-	  		<h5>Manejo de ramas en GitHub:</h5>
-	  		
-	  		<p>En github se puede crear una rama o Branch para poder comenzar a trabajar.</p>
-	  		<p>Por ejemplo si tuviéramos la rama master -> Find or create Branch -> develop ->create brach</p>
-	  		<p> Esta opción copia todo el contenido de la rama master a develop.</p>
-	  		<p>Si se realizan cambios en develop y luego quiero que los cambios se actualicen, 
-	  		ejecutar las siguientes instrucciones.</p>
-	  		<p> COMPARE and pull request</p>
-	  		<p> Merge Pull request</p>
-	  		<p> Confirm</p>       
-	  		
-	  	</div>
-
-
-    <div>
-    	<h5>PARA CLONAR UN REPOSITORIO</h5>
-    	<ol>
-    		<li>1) Necesitas que no exista el proyecto en la compu</li>
-    		<li>2) Vas a github a la rama develop ir a code -> y te copias la dirección</li>
-    		<li>3) Abrir git bash, posicionarse sobre el directorio donde vas a trabajar.</li>
-    		<li>4) Ejecutar: git clone https://xxxxxxxxxx (esta dirección es la que copias desde github)</li>
-    		<li>5) En git bash abrir el directorio con cd NOMBREDELDIRECTORIO</li>
-    		<li>6) Para saber que ramas tengo disponibles git branch</li>
-    		<li>7) Si necesitas crear una rama git branch develop</li>
-    		<li>8) Para seleccionar la rama creada y poder trabajar en ella git checkout develop</li>
-    	</ol>
-
-    </div>
-
-    <div>
-    	<p>Ahora si realizas cualquier modificación en VSCode sobre cualquier archivo del proyecto y ejecutas</p>
-    	<pre>git status (vas a poder ver que se realizaron cambios)</pre>
-    	<p>Entonces lo agregamos al repositorio local</p>
-    	<pre>git add prueba1.html (por ejemplo)</pre>
-
-    	<p>Si queremos agregar varios archivos</p>
-    	<pre>git add .</pre>
-
-    	<p>Para realizar commit</p>
-    	<pre>git commit -m “Mi Segundo commit”</pre>
-
-    	<p>Para fusionar la rama develop y la rama master, Pensando que estamos trabajando en develop:</p>
-    	<pre>
-        git checkout master
-        git merge develop
-        para subir todo a github:
-        git checkout master
-        git Branch
-        git push -u origin master    		
-    	</pre>
-
-    	<p>Actualizar el repositorio GITHUB y ver los cambio</p>
-
-    </div>
-
-
-	  </div>
+	    <div class="border mx-1 my-1 px-2 py-2">
+		
+		    <!-- Apuntes Angular -->
+	  
+	        <div class="border border-2 mx-3 my-2 px-3 py-2">
+			
+			    <h5> Arrays en Angular</h5>
+				
+				<p>En Angular se pueden crear arrays de varias formas. En esta sección se
+				presentarán dos formas: declaración de un array literalmente y usando el
+				método push para agregar elementos.</p>
+				
+				<h6>Declaración de un array literalmente</h6>
+				
+				<p>myArray : number[] = [1, 2, 3, 4, 5];</p>
+				<p>myArrayTexto : string[] = ["texto_01", "texto_02", "texto_03"];</p>
+				
+				<h6>Uso del método push() para agregar elementos a un array vacío</h6>
+				
+                <p>Declaración de un array vacío</p>				
+				<p>myArray : number[] = [];</p>
+					
+				<p>Agregando elementos con push()</p>
+					
+				<p>this.myArray.push(1);</p>
+				<p>this.myArray.push(2);</p>
+				<p>this.myArray.push(3);</p>
+				<p>this.myArray.push(4);</p>
+													
+			</div>
+			
+			<!-- Final apuntes Angular --> 		
+	   	  	
+	    </div>
      		
 	</div>    <!-- final div container -->
 	

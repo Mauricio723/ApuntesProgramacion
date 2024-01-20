@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+  <head>  
+      
+    <meta charset="utf-8">   
+    <!-- <meta charset="ISO-8859-1">  -->            
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
+
+    <title>Apuntes Programación 02</title>
+	  
+	<!--  
+    <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
+    -->
+	
+	<style>	
+		pre {
+			background-color: rgb(230, 240, 250);	
+            padding-left: 10px;			
+		}
+		
+	</style>	
+	<script>
+		function iniciar() {
+			let botonOcultar = document.getElementById("id_boton_ocultar");
+			botonOcultar.addEventListener("click", ocultar, false);
+			
+		}
+		
+		function ocultar() {
+			
+			let elemento_para_ocultar = document.getElementById("id_div_articulo");
+			
+			elemento_para_ocultar.hidden = ! elemento_para_ocultar.hidden;
+			
+		}
+		
+		window.addEventListener("load", iniciar, false);
+		
+	</script>
+	
+  </head>
+  <body class="px-1" >
+  
+	<header class="container-fluid ">
+		
+		<div class="row div_cabecera_01">	
+		
+			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-5"> 
+                <p>header 01</p>			
+			</div>
+			
+			<div class="col-sm-5 col-md-1 col-lg-3 col-xl-4">
+			    <p>header 01</p>
+			</div>  
+			
+			<div class="col-sm-7 col-md-5 col-lg-4 col-xl-3">
+			   
+				<nav class="navbar">
+				    <p>Espacio nav</p>
+				</nav>
+				
+			</div>
+		</div>
+				
+	</header>	
+	
+	<div class="container-fluid ">
+		
+	    
+
+        <div class="border mx-1 my-1 px-2 py-2">
+	        <h4 class="text-center"> Apuntes de Programación 02</h4>
+	    </div>	
+
+        <div class="row border mx-2 my-2" >
+		    <div class="col-3">
+			
+			    <ul>
+				    <li>App 01</li>
+					<li>App 02</li>
+					<li>App 03</li>
+					<li>App 04</li>
+					<li>App 05</li>
+				</ul>
+			
+			</div>
+			<div class="col-9">
+			
+			    <div class="border mx-1 my-1 px-2 py-2">
+		
+                    <h3>Programación C#</h3>
+                  
+                    <br>
+					<div class="text-center mx-2 my-2 px-2 py-2">
+						<h4>------------------------------------------</h4>
+					</div>
+					
+					<!--
+					<button id="id_boton_ocultar">Ocultar / mostrar</button>
+					-->
+					
+                    <div class="border mx-2 my-2 py-2" hidden="false" id="id_div_articulo">
+					
+ 
+					</div>
+ 
+                    <div class="border mx-2 my-2 py-2">
+					
+					    
+										    					
+					</div>
+                    <div class="border mx-2 my-2 py-2">
+						<h4>Estructura y ejemplo de un programa C# - de consola</h4>					   					
+					</div>
+					
+                    <div class="border mx-2 my-2 py-2">									    
+						<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Primer_Proyecto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hola Mundo!");
+
+            // continuar al presonar una tecla
+            Console.WriteLine("Presione Enter para salir");
+            Console.ReadKey();
+        }
+    }
+}
+						</pre>
+						
+					</div>
+
+                    <div class="border mx-2 my-2 py-2">
+						<p>Comentarios</p>
+						<p>Los comentarios de una sola línea se logran anteponiendo //
+						a lo que se quiera comentar</p>
+						<p>Ejemplo: // esto es un comentario de una línea</p>
+						<p>Los comentarios de varias líneas se logran encerrando todo lo 
+						que se quiera comentar entre /* y */</p>
+						<p>/* Esto es un comentario <br> 
+						de más de una línea */</p>
+										    					
+					</div>
+                    <div class="border mx-2 my-2 py-2">	
+
+						<h5>Método principal de una aplicación</h5>
+						<p>Una aplicación de consola en C# debe contener un método Main,
+						en el cual se inicia y se termina el control. Este método es donde
+						se crean objetos y se ejecutan otros métodos. El método Main es un
+						método static, que reside dentro de una clase. </p>
+					   					
+						<p>Variantes del método Main</p>
+						
+						<p>Método Main que no devuelve nada (void)</p>
+						
+						<pre>
+	static void Main()
+	{
+		// ...
+		}
+						</pre>
+						
+						<p>Método Main que devuelve un entero</p>
+						<pre>
+	static int Main()
+	{
+		// .....
+		return 0;
+	}
+						</pre>
+						
+						<p>Método Main que recibe parámetros</p>
+						<pre>
+	static void Main(string[] args)
+	{
+		// ...
+	}
+						</pre>
+	
+					<p>El parámetro del método Main, args, es una matriz de tipo string
+						que contiene los argumentos de la línea de comandos utilizados para 
+						llamar al programa.</p>
+						
+					</div>
+                    <div class="border mx-2 my-2 py-2">									    
+					
+					</div>
+					
+	            </div>
+			
+			</div>
+		</div>
+		         		
+	</div>    <!-- final div container -->
+	
+	<footer class="mx-1 my-1 px-2 py-2">
+		<div class="border  bg-secondary text-light px-2 py-2">
+		
+			<h5>Autor : Salvador Mauricio Vilches Jerez</h5>
+			<h5>Fecha inicio proyecto : 6 de Noviembre de 2023</h5>
+			<h5>Fecha de publicación : Sin publicar </h5>
+      <p>****************************************************************</p>
+	      <h5>Contacto : </h5>
+		    <h5>Email: salvadorvilches1972@gmail.com</h5>         
+      <p>****************************************************************</p>  
+	  
+		</div>
+		
+	</footer>
+	
+	<!--
+    <script src="bootstrap-5.0.1-dist\js/bootstrap.bundle.min.js"></script>
+    -->
+	<script src="ArchivosLibretaDeApuntes\Bootstrap_01\bootstrap.bundle.min.js"></script>
+	
+  </body>
+</html>
+
