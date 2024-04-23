@@ -14,9 +14,35 @@
     <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
     -->
 	
-	<style>		
-		
+	<style>	
+		.div_articulo {
+			background-color: rgb(230, 220, 210);
+		}
+		.div_articulo h4 {
+			text-align: center;
+		}
+		.div_articulo p {
+			background-color: rgb(220, 235, 245);
+			color: rgb(80, 70, 60);
+			padding: 10px;
+		}
+		.div_con_pre {
+			background-color: rgb(150, 180, 180);
+			color: rgb(80, 70, 60);
+			margin-bottom: 10px;
+			padding: 10px 10px 10px 10px;
+		}
+		.div_con_pre h5 {
+			background-color: rgb(220, 235, 245);			
+			padding: 10px;
+		}
+		.div_con_pre pre {
+			background-color: rgb(220, 235, 245);
+			font-size: 1.1em;
+			padding-top: 5px;
+		}
 	</style>	
+	
   </head>
   <body class="px-1" >
   
@@ -53,31 +79,44 @@
 		
 		    <!-- Apuntes Angular -->
 	  
-	        <div class="border border-2 mx-3 my-2 px-3 py-2">
+	        <div class="div_articulo border border-2 mx-3 my-2 px-3 py-2">
 			
-			    <h5> Arrays en Angular</h5>
+			    <h4> Arrays en Angular</h4>
 				
 				<p>En Angular se pueden crear arrays de varias formas. En esta sección se
 				presentarán dos formas: declaración de un array literalmente y usando el
 				método push para agregar elementos.</p>
 				
-				<h6>Declaración de un array literalmente</h6>
+				<div class="div_con_pre">
+					<h5>Declaración de un array literalmente</h5>
+												
+					<pre>
+	myArray : number[] = [1, 2, 3, 4, 5];
+	myArrayTexto : string[] = ["texto_01", "texto_02", "texto_03"];
+					</pre>
+				</div>
 				
-				<p>myArray : number[] = [1, 2, 3, 4, 5];</p>
-				<p>myArrayTexto : string[] = ["texto_01", "texto_02", "texto_03"];</p>
+				<div class="div_con_pre">
+				<h5>Uso del método push() para agregar elementos a un array vacío</h5>
 				
-				<h6>Uso del método push() para agregar elementos a un array vacío</h6>
 				
-                <p>Declaración de un array vacío</p>				
-				<p>myArray : number[] = [];</p>
-					
-				<p>Agregando elementos con push()</p>
-					
-				<p>this.myArray.push(1);</p>
-				<p>this.myArray.push(2);</p>
-				<p>this.myArray.push(3);</p>
-				<p>this.myArray.push(4);</p>
-													
+				<pre>
+	<strong>Declaración de un array vacío</strong>
+	
+	myArray : number[] = [];
+				</pre>
+				
+				
+				<pre>
+	<strong>Agregando elementos con push()</strong>
+	
+	this.myArray.push(1);
+	this.myArray.push(2);
+	this.myArray.push(3);
+	this.myArray.push(4);
+				</pre>
+				</div>		
+				
 			</div>
 			
 			<!-- Final apuntes Angular --> 		
