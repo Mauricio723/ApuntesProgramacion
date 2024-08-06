@@ -1,228 +1,258 @@
 <!doctype html>
 <html lang="es">
-  <head>  
-      
-    <meta charset="utf-8">   
-    <!-- <meta charset="ISO-8859-1">  -->            
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
 
-    <title>Apuntes Programación 02</title>
-	  
+<head>
+
+	<meta charset="utf-8">
+	<!-- <meta charset="ISO-8859-1">  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--
+    <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
+	-->
+
+
+	<link rel="stylesheet" href="archivos_libreta_de_apuntes/estilos_libreta_de_apuntes.css">
+
+	<title>Apuntes Programación 02</title>
+
 	<!--  
     <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
     -->
-	
-	<style>	
-		pre {
-			background-color: rgb(230, 240, 250);	
-            padding-left: 10px;			
-		}
-		
-	</style>	
+
+	<style>
+
+	</style>
+
+	<!--
 	<script>
 		function iniciar() {
 			let botonOcultar = document.getElementById("id_boton_ocultar");
-			botonOcultar.addEventListener("click", ocultar, false);
-			
-		}
-		
-		function ocultar() {
-			
-			let elemento_para_ocultar = document.getElementById("id_div_articulo");
-			
-			elemento_para_ocultar.hidden = ! elemento_para_ocultar.hidden;
-			
-		}
-		
-		window.addEventListener("load", iniciar, false);
-		
+			botonOcultar.addEventListener("click", ocultar, false);			
+		}		
+		function ocultar() {			
+			let elemento_para_ocultar = document.getElementById("id_div_articulo");			
+			elemento_para_ocultar.hidden = ! elemento_para_ocultar.hidden;			
+		}		
+		window.addEventListener("load", iniciar, false);		
 	</script>
-	
-  </head>
-  <body class="px-1" >
-  
-	<header class="container-fluid ">
-		
-		<div class="row div_cabecera_01">	
-		
-			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-5"> 
-                <p>header 01</p>			
+	-->
+
+</head>
+
+<body class="estilo_body texto_body">
+
+	<header class="estilo_header_01">
+		<h3 class="estilo_subtitulo_01">SurCode25</h3>
+		<h1 class="estilo_titulo_01">Libreta De Apuntes</h1>
+	</header>
+	<nav class="estilo_nav_01">
+		<div class="div_nav_01">
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p"><a href="LibretaDeApuntes01.html">Inicio</a></p>
+				<p class="item_enlace_p"><a href="ApuntesProgramacion01.html" target="-blank">Programación 01</a></p>
 			</div>
-			
-			<div class="col-sm-5 col-md-1 col-lg-3 col-xl-4">
-			    <p>header 01</p>
-			</div>  
-			
-			<div class="col-sm-7 col-md-5 col-lg-4 col-xl-3">
-			   
-				<nav class="navbar">
-				    <p>Espacio nav</p>
-				</nav>
-				
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p"><a href="ApuntesProgramacion02.html">Programación 02</a></p>
+				<p class="item_enlace_p"><a href="#">Categoría 04</a></p>
+			</div>
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p"><a href="#">Categoría 05</a></p>
+				<p class="item_enlace_p"><a href="#">Categoría 06</a></p>
 			</div>
 		</div>
-				
-	</header>	
-	
-	<div class="container-fluid ">
+
+	</nav>
+
+
+	<main class="estilo_main_01">
+
+		<div class="contenedor_section">
+
+			<section class="estilo_section_01">
+
+				<aside class="estilo_aside">
+					<div class="div_aside_01">
+						<p class="item_aside_section">enlace aside 01</p>
+						<p class="item_aside_section">enlace aside 02</p>
+						<p class="item_aside_section">enlace aside 03</p>
+						<p class="item_aside_section">enlace aside 04</p>
+						<p class="item_aside_section">enlace aside 05</p>
+						<p class="item_aside_section">enlace aside 06</p>
+						<p class="item_aside_section">enlace aside 07</p>
+						<p class="item_aside_section">enlace aside 08</p>
+						<p class="item_aside_section">enlace aside 09</p>
+						<p class="item_aside_section">enlace aside 10</p>
+					</div>
+				</aside>
+
+
+				<div class="div_section_01">
+
+					<h4 class="estilo_titulo_con_fondo">Apuntes Programación 02</h4>
+
+					<article class="estilo_article_01">
+
+						<h3 class="titulo_article">Programación C#</h3>
+
+						<p class="parrafo_article"></p>
+
+						<div class="">
+
+							<h4 class="subtitulo_article">Estructura y ejemplo de un programa C# - de consola</h4>
+
+
+							<div class="contenedor_pre">
+								<pre class="estilo_pre">
+
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Text;
 		
-	    
+  namespace Primer_Proyecto
+  {
+	  class Program
+	  {
+		  static void Main(string[] args)
+		  {
+			  Console.WriteLine("Hola Mundo!");
 
-        <div class="border mx-1 my-1 px-2 py-2">
-	        <h4 class="text-center"> Apuntes de Programación 02</h4>
-	    </div>	
+			  // continuar al presonar una tecla
+			  Console.WriteLine("Presione Enter para salir");  
+			  Console.ReadKey();
+		  }
+	  }
+  }
 
-        <div class="row border mx-2 my-2" >
-		    <div class="col-3">
-			
-			    <ul>
-				    <li>App 01</li>
-					<li>App 02</li>
-					<li>App 03</li>
-					<li>App 04</li>
-					<li>App 05</li>
-				</ul>
-			
-			</div>
-			<div class="col-9">
-			
-			    <div class="border mx-1 my-1 px-2 py-2">
-		
-                    <h3>Programación C#</h3>
-                  
-                    <br>
-					<div class="text-center mx-2 my-2 px-2 py-2">
-						<h4>------------------------------------------</h4>
-					</div>
-					
-					<!--
-					<button id="id_boton_ocultar">Ocultar / mostrar</button>
-					-->
-					
-                    <div class="border mx-2 my-2 py-2" hidden="false" id="id_div_articulo">
-					
- 
-					</div>
- 
-                    <div class="border mx-2 my-2 py-2">
-					
-					    
-										    					
-					</div>
-                    <div class="border mx-2 my-2 py-2">
-						<h4>Estructura y ejemplo de un programa C# - de consola</h4>					   					
-					</div>
-					
-                    <div class="border mx-2 my-2 py-2">									    
-						<pre>
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+								</pre>
 
-namespace Primer_Proyecto
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hola Mundo!");
+							</div>
 
-            // continuar al presonar una tecla
-            Console.WriteLine("Presione Enter para salir");
-            Console.ReadKey();
-        }
-    }
-}
-						</pre>
-						
-					</div>
+							<div class="div_item_article">
+								<h4 class="subtitulo_article">Comentarios</h4>
+								<p class="parrafo_article">Los comentarios de una sola línea se logran anteponiendo //
+									a lo que se quiera comentar</p>
+								<p class="parrafo_article">Ejemplo: // esto es un comentario de una línea</p>
+								<p>Los comentarios de varias líneas se logran encerrando todo lo
+									que se quiera comentar entre /* y */</p>
+								<p class="parrafo_article">/* Esto es un comentario <br>
+									de más de una línea */</p>
 
-                    <div class="border mx-2 my-2 py-2">
-						<p>Comentarios</p>
-						<p>Los comentarios de una sola línea se logran anteponiendo //
-						a lo que se quiera comentar</p>
-						<p>Ejemplo: // esto es un comentario de una línea</p>
-						<p>Los comentarios de varias líneas se logran encerrando todo lo 
-						que se quiera comentar entre /* y */</p>
-						<p>/* Esto es un comentario <br> 
-						de más de una línea */</p>
-										    					
-					</div>
-                    <div class="border mx-2 my-2 py-2">	
+							</div>
 
-						<h5>Método principal de una aplicación</h5>
-						<p>Una aplicación de consola en C# debe contener un método Main,
-						en el cual se inicia y se termina el control. Este método es donde
-						se crean objetos y se ejecutan otros métodos. El método Main es un
-						método static, que reside dentro de una clase. </p>
-					   					
-						<p>Variantes del método Main</p>
-						
-						<p>Método Main que no devuelve nada (void)</p>
-						
-						<pre>
+							<div class="div_item_article">
+
+								<h4 class="titulo_article">Método principal de una aplicación</h4>
+								<p class="parrafo_article">Una aplicación de consola en C# debe contener un método Main,
+									en el cual se inicia y se termina el control. Este método es donde
+									se crean objetos y se ejecutan otros métodos. El método Main es un
+									método static, que reside dentro de una clase. </p>
+
+								<br>
+
+								<h5 class="titulo_article">Variantes del método Main</h5>
+
+								<br>
+
+								<h5 class="subtitulo_article">Método Main que no devuelve nada (void)</h5>
+
+								<div class="contenedor_pre">
+									<pre class="estilo_pre">
 	static void Main()
 	{
 		// ...
-		}
-						</pre>
-						
-						<p>Método Main que devuelve un entero</p>
-						<pre>
+	}
+									</pre>
+								</div>
+
+								<br>
+
+								<h5 class="subtitulo_article">Método Main que devuelve un entero</h5>
+
+								<div class="contenedor_pre">
+									<pre class="estilo_pre">
 	static int Main()
 	{
 		// .....
 		return 0;
 	}
-						</pre>
-						
-						<p>Método Main que recibe parámetros</p>
-						<pre>
+									</pre>
+								</div>
+
+								<br>
+								<h5 class="subtitulo_article">Método Main que recibe parámetros</h5>
+
+								<div class="contenedor_pre">
+									<pre class="estilo_pre">
 	static void Main(string[] args)
 	{
 		// ...
 	}
-						</pre>
-	
-					<p>El parámetro del método Main, args, es una matriz de tipo string
-						que contiene los argumentos de la línea de comandos utilizados para 
-						llamar al programa.</p>
-						
-					</div>
-                    <div class="border mx-2 my-2 py-2">									    
-					
-					</div>
-					
-	            </div>
-			
-			</div>
+									</pre>
+
+								</div>
+
+
+								<p class="parrafo_article">El parámetro del método Main, args, es una matriz de tipo
+									string
+									que contiene los argumentos de la línea de comandos utilizados para
+									llamar al programa.</p>
+
+							</div>
+
+						</div>
+
+
+					</article>
+
+					<article class="estilo_article_01">
+
+						<h3 class="titulo_article">Título de article 02</h3>
+						<p class="parrafo_article">Contenido para párrafo de artcicle. Contenido para
+							párrafo de article. Contenido para párrafo de article. Contenido para párrafo
+							de article. Contenido para párrafo de article. Contenido para párrafo de article.</p>
+
+					</article>
+
+				</div>
+
+			</section>
+
 		</div>
-		         		
-	</div>    <!-- final div container -->
-	
-	<footer class="mx-1 my-1 px-2 py-2">
-		<div class="border  bg-secondary text-light px-2 py-2">
-		
+
+		<aside class="estilo_aside">
+			<div class="div_aside_01">
+				<p class="item_aside_main">enlace aside 01</p>
+				<p class="item_aside_main">enlace aside 02</p>
+				<p class="item_aside_main">enlace aside 03</p>
+				<p class="item_aside_main">enlace aside 04</p>
+				<p class="item_aside_main">enlace aside 05</p>
+				<p class="item_aside_main">enlace aside 06</p>
+				<p class="item_aside_main">enlace aside 07</p>
+				<p class="item_aside_main">enlace aside 08</p>
+				<p class="item_aside_main">enlace aside 09</p>
+				<p class="item_aside_main">enlace aside 10</p>
+			</div>
+		</aside>
+
+	</main>
+	<footer class="estilo_footer_01">
+
+		<div class="div_footer_01">
+
 			<h5>Autor : Salvador Mauricio Vilches Jerez</h5>
 			<h5>Fecha inicio proyecto : 6 de Noviembre de 2023</h5>
 			<h5>Fecha de publicación : Sin publicar </h5>
-      <p>****************************************************************</p>
-	      <h5>Contacto : </h5>
-		    <h5>Email: salvadorvilches1972@gmail.com</h5>         
-      <p>****************************************************************</p>  
-	  
-		</div>
-		
-	</footer>
-	
-	<!--
-    <script src="bootstrap-5.0.1-dist\js/bootstrap.bundle.min.js"></script>
-    -->
-	<script src="ArchivosLibretaDeApuntes\Bootstrap_01\bootstrap.bundle.min.js"></script>
-	
-  </body>
-</html>
+			<p>****************** ****************** *******************</p>
+			<h5>Contacto : </h5>
+			<h5>Email: salvadorvilches1972@gmail.com</h5>
+			<p>****************** ******************* ********************</p>
 
+		</div>
+
+	</footer>
+
+</body>
+
+</html>

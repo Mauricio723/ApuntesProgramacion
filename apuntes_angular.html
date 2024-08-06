@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <meta charset="ISO-8859-1">  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--
+    <link href="ArchivosLibretaDeApuntes\BootsTrap_01\bootstrap.min.css" rel="stylesheet">
+	-->
+
+	<link href="archivos_libreta_de_apuntes/estilos_libreta_de_apuntes.css" rel="stylesheet">
+
+	<title>Apuntes Programación 01</title>
+
+	<!--  
+    <script src= "ArchivosLibretaDeApuntes\ScriptPortfolio_01.js"></script>
+    -->
+
+	<style>
+
+	</style>
+
+	<!--
+	<script type="module">
+		Prism.highlightAll();
+	 </script>
+	 -->
+
+</head>
+
+<body class="estilo_body texto_body">
+
+	<header class="estilo_header_01">
+		<h3 class="estilo_subtitulo_01">SurCode25</h3>
+		<h1 class="estilo_titulo_01">Título principal header</h1>
+	</header>
+	<nav class="estilo_nav_01">
+		<div class="div_nav_01">
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p"><a href="LibretaDeApuntes01.html">Inicio</a></p>
+				<p class="item_enlace_p">enlace nav 02</p>
+			</div>
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p">enlace nav 03</p>
+				<p class="item_enlace_p">enlace nav 04</p>
+			</div>
+			<div class="div_nav_enlaces">
+				<p class="item_enlace_p">enlace nav 05</p>
+				<p class="item_enlace_p">enlace nav 06</p>
+			</div>
+		</div>
+	</nav>
+	<main class="estilo_main_01">
+
+		<div class="contenedor_section">
+
+			<section class="estilo_section_01">
+
+				<aside class="estilo_aside">
+					<div class="div_aside_01">
+						<p class="item_aside_section" id="indice_section">INDICE</p>
+						<p class="item_aside_section"><a href="#instalacion">Instalación</a></p>
+						<p class="item_aside_section"><a href="#componentes">Componentes</a></p>
+						<p class="item_aside_section"><a href="#formularios">Formularios</a></p>
+						<p class="item_aside_section"><a href="#arrays">Arrays</a></p>
+						<p class="item_aside_section"><a href="#obtener_url">Obtener URL</a></p>
+						<p class="item_aside_section">enlace aside 06</p>
+						<p class="item_aside_section">enlace aside 07</p>
+						<p class="item_aside_section">enlace aside 08</p>
+						<p class="item_aside_section">enlace aside 09</p>
+						<p class="item_aside_section">enlace aside 10</p>
+					</div>
+				</aside>
+
+
+				<div class="div_section_01">
+
+					<h4 class="estilo_titulo_con_fondo">Programación Angular</h4>
+
+					<article id="instalacion" class="estilo_article_01">
+
+						<h3 class="titulo_article" title="Click acá para volver al índice"><a href="#">Instalación de Angular</a></h3>
+
+						
+
+						<p class="parrafo_article">Para la instalación hay que abrir la consola de comandos
+							y asegurarse de tener acceso a internet. luego seguir los siguientes pasos.
+						</p>
+
+						<p class="parrafo_article">1. Instalar NodeJS en su última versión desde el sitio
+							de web oficial</p>
+						<p class="parrafo_article">2. Abrir la consola del sistema operativo</p>
+						<p class="parrafo_article">1. Instalar NPM (Node Package Manager) En la consola ejecutar el
+							siguiente comando: <strong>npm install -g npm@latest</strong>, para obtener
+							la última versión de NPM.</p>
+						<p class="parrafo_article">4. Instalar la última versión de Angular CLI con el siguiente
+							comando: <br>&nbsp; &nbsp;<strong>npm install -g @angular/cli@latest</strong></p>
+						<p class="parrafo_article">5. Para crear un proyecto : Moverse desde la consola hasta
+							el lugar donde queremos crear nuestro proyecto. Mi escritorio, mis documentos,
+							o cualquier otra carpeta específica.</p>
+						<p class="parrafo_article">6. Ejecutar el siguiente comando:
+							<strong>ng new nombre-del-proyecto</strong>
+						</p>
+						<p class="parrafo_article">7. El asistente nos solicitará algunos datos del proyecto:
+							Recordar que el nombre del proyecto no puede contener espacios o guiones u otros
+							caracteres especiales, solo letras y números.
+							Si se quiere añadir el routing de angular. Esto es opcional, ya que se puede
+							agregar de forma manual de ser necesario.
+							Preguntará si queremos usar un formato específico para los estilos.</p>
+						<p class="parrafo_article">8. Esperamos a que el asistente acabe de generar
+							nuestro proyecto de Angular</p>
+						<p class="parrafo_article">9. Con lo anterior Ya estamos listos para abrir el proyecto
+							con nuestro el ID de preferencia (Puede ser Visual Studio Code o sublime Text).</p>
+
+					</article>
+
+					<article id="componentes" class="estilo_article_01">
+
+						<h3 class="titulo_article" title="Click acá para volver al índice"><a href="#indice_section">Creación de componentes</a></h3>
+
+						<p class="parrafo_article">Ahora, para crear un componente se debe ejecutar el
+							siguiente comando:</p>
+						<p class="parrafo_article"> <strong>ng generate component &lt;nombre-del-componente&gt;
+								[opciones]</strong></p>
+						<p class="parrafo_article">También se puede usar la forma abreviada:</p>
+						<p class="parrafo_article"> <strong>ng g c &lt;nombre-del-componente&gt; [opciones]</strong></p>
+						<p class="parrafo_article">Y para un mejor orden se puede especificar una carpeta donde ir
+							guardando los
+							componentes, por ejemplo en el siguiente comando, incorporamos la carpeta
+							components:</p>
+						<p class="parrafo_article">
+							<strong>ng g c components/&lt;nombre-del-componente&gt; [opciones]</strong>
+						</p>
+
+						<br>
+					</article>
+
+					<article id="formularios" class="estilo_article_01">
+
+						<h3 class="titulo_article" title="Click acá para volver al índice"><a href="#indice_section">Formularios Reactivos</a></h3>
+
+					
+
+						<div class="div_item_article">
+
+							<p class="parrafo_article">Los formularios reactivos, también se conocen como formularios
+								dirigidos por modelos. Emplean una técnica en la que los formularios se diseñan en el
+								componente y luego se realizan los enlaces para el HTML. Proveen métodos
+								explícitos e inmutables para administrar el estado del formulario cuyos valores
+								cambian con el tiempo. Cada cambio de estado en el formulario retorna un nuevo
+								valor permitiendo mantener la integridad con el modelo.</p>
+
+							<p class="parrafo_article">Además, cada elemento de la vista está directamente enlazado
+								al modelo mediante una instancia de FormControl. Las actualizaciones de la vista
+								al modelo y del modelo a la vista son síncronas y no dependen de la representación
+								en la Interfaz de Usuario.
+								Dichos formularios están basados en flujos de datos del tipo Observable, donde
+								cada entrada/valor puede ser accedido de manera asíncrona.</p>
+
+							<p class="parrafo_article"> Para que Angular, intérprete nuestros formularios como
+								reactivos,
+								debemos importar los módulos de Formularios y Formularios Reactivos en el archivo
+								app.module.ts o en los módulos dónde necesites trabajar dichos formularios.
+								En el siguiente ejemplo vemos como quedaría el módulo principal con los módulos
+								de formularios incorporados:</p>
+
+							<div class="contenedor_pre">
+								<pre class="estilo_pre">
+									<code>
+  import { NgModule } from '@angular/core';
+  import { BrowserModule } from '@angular/platforms-browser';
+  // Importamos los modulos
+
+  import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+  import { AppComponent } from './app.component';
+
+  @NgModule({
+    // hay que cargar los modulos FormModule y ReactiveFormsModule al proyecto 
+    imports: [ BrowseModule, FormsModule, ReactiveFormsModule ],
+    declarations: [ AppComponent, LoginComponent ], 
+    bootstrap: [ AppComponent ]
+  })
+
+  export class AppModule {}
+									</code>
+								</pre>
+							</div>
+
+							<p class="parrafo_article">De esta forma podemos podemos pasar al siguiente paso que es
+								meter mano en el controlador</p>
+
+						</div>
+
+						<div class="div_item_article">
+
+							<h4 class="subtitulo_article">FormControl</h4>
+
+							<p class="parrafo_article">
+								Es la unidad más pequeña de un formulario reactivo como por ejemplo: un cuadro
+								de texto, un calendario, una lista desplegable, etc. Para configurar un FormControl
+								reactivo debemos:</p>
+							<p class="parrafo_article">
+								1. Importar la librería en el controlador de nuestro componente:
+								import {FormControl} from '@angular/forms';
+								<br>2. Inyectar en el constructor el formBuilder
+								<br>3. En el constructor de nuestro controlador crear el grupo de controles para el
+								formulario
+								<br>4. En el template del controlador enlazar el form builder utilizando el property
+								binding [formGroup] y los atributos formControlName con sus respectivos
+								form control</p>
+							<p class="parrafo_article">
+								Todavía no será funcional ya que nos falta incluir las validaciones y lógica del
+								formulario, pero así nos quedará el controlador y el template hasta este momento:
+							</p>
+
+							<h5 class="subtitulo_article">
+								Ejemplo de Controlador para un formulario de inicio de sesión</h5>
+
+							<div class="contenedor_pre">
+								<pre class="estilo_pre">
+									<code>
+
+  import { Component, OnInit } from '@angular/core';
+  import { FormBuilder, FormGroup } from '@angular/forms';
+
+  @Component({
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
+  })
+  
+  export class LoginComponent implements OnInit {
+    form: FormGroup; 
+ 
+    // Inyectar en el constructor el formBuilder 
+    constructor(private formBuilder: FormBuilder) {
+      this.form= this.formBuilder.group({
+      password:['', []], 
+      mail:['', []]
+      })
+    }
+
+    ngOnInit() {}
+
+  }
+									</code>
+								</pre>
+							</div>
+
+							<h5 class="subtitulo_article">Ejemplo de template para un formulario de inicio
+								de sesión asociado al controlador anterior
+							</h5>
+
+							<div class="contenedor_pre">
+								<pre class="estilo_pre">
+									<code>
+
+  &lt;form [formGroup]="form"&gt; 
+     &lt;div&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" formControlName="mail"&gt;
+     &lt;/div&gt;
+     &lt;br/&gt;
+     &lt;div&gt;
+        &lt;label for="exampleInputPassword1" class="form-label"&gt;Password: &lt;/label&gt;
+        &lt;input type="password" formControlName="password"&gt;
+     &lt;/div&gt;
+     &lt;br/&gt;
+     &lt;div&gt;
+        &lt;button type="submit"&gt;Iniciar Sesión&lt;/button&gt; 
+     &lt;/div&gt; 
+  &lt;/form&gt;
+									</code>
+								</pre>
+							</div>
+
+						</div>
+
+					</article>
+
+					<article id="arrays" class="estilo_article_01">
+
+						<div class="">
+
+							<h4 class="titulo_article" title="Click acá para volver al índice"> <a href="#indice_section">Arrays en Angular</a></h4>
+
+							<p class="parrafo_article">En Angular se pueden crear arrays de varias formas. En esta
+								sección se
+								presentarán dos formas: declaración de un array literalmente y usando el
+								método push para agregar elementos.</p>
+
+							<div class="div_item_article">
+								<h5 class="subtitulo_article">Declaración de un array literalmente</h5>
+
+								<div class="contenedor_pre">
+
+
+									<pre class="estilo_pre">
+										<code>
+  myArray : number[] = [1, 2, 3, 4, 5];
+  myArrayTexto : string[] = ["texto_01", "texto_02", "texto_03"];
+										</code>
+									</pre>
+								</div>
+							</div>
+
+							<div class="div_item_article">
+
+								<h5 class="subtitulo_article">Uso del método push() para agregar elementos a un array
+									vacío</h5>
+
+								<div class="contenedor_pre">
+
+									<h5 class="subtitulo_article">Declaración de un array vacío</h5>
+
+									<pre class="estilo_pre">
+										<code>
+	myArray : number[] = [];
+										</code>
+									</pre>
+
+									<h5 class="subtitulo_article">Agregando elementos con push()</h5>
+
+									<pre class="estilo_pre">
+										<code>
+	this.myArray.push(1);
+	this.myArray.push(2);
+	this.myArray.push(3);
+	this.myArray.push(4);
+										</code>
+									</pre>
+								</div>
+
+							</div>
+
+						</div>
+
+					</article>
+
+					<article id="obtener_url" class="estilo_article_01">
+
+						<h3 class="titulo_article" title="Click aquí para volver al índice"><a href="#indice_section">Obtención de la URL de la ruta actual, en Angular 11</a></h3>
+
+						<h4 class='subtitulo_article'> Ejemplos </h4>
+
+						<p class="parrafo_article"> En esta sección, se muestra cómo obtener la URL de ruta actual en
+							angular 11
+							Hay muchos tipos de ejemplos a través de los cuales puede obtener la URL
+							de la ruta actual.</p>
+
+						<p class="parrafo_article">Si desea la URL de la ruta actual o la ruta, puede usar las dos
+							formas,
+							como la ubicación de la ventana y la URL del enrutador.</p>
+
+						<div class="div_item_article">
+
+							<h4 class="subtitulo_article">Usando la ubicación de la ventana</h4>
+
+							<p class="parrafo_article"> En este ejemplo, podemos obtener fácilmente la URL de la ruta
+								actual
+								usando la ubicación de la ventana en angular. </p>
+
+
+							<div class="contenedor_pre">
+								<pre class="estilo_pre">
+
+	import { Component } from '@angular/core';
+	import { Router } from '@angular/router';
+
+	@Component({
+		selector: 'app-root',
+		 templateUrl: './app.component.html',
+		 styleUrls: ['./app.component.css']
+	 })
+							 
+	 export class AppComponent {
+
+		constructor() { }
+
+		 ngOnInit() {
+			console.log( window.location.href);
+		}
+
+	}
+
+								</pre>
+							</div>
+						</div>
+
+						<div class="div_item_article">
+
+							<h4 class="subtitulo_article">Usando la URL del enrutador</h4>
+
+							<p class="parrafo_article">En este ejemplo, se muestra como obtener la URL de la ruta actual
+								usando la URL del
+								enrutador en angular. por lo que aquí se usa la biblioteca de enrutadores.</p>
+
+							<div class="contenedor_pre">
+
+								<pre class="estilo_pre">
+
+	import { Component } from '@angular/core';
+	import { Router } from '@angular/router';
+ 
+	@Component({
+  	  selector: 'app-root',
+  	  templateUrl: './app.component.html',
+  	  styleUrls: ['./app.component.css'] 
+	})
+ 
+	export class AppComponent {
+ 
+  	  constructor(private router: Router) { }
+ 
+  	  ngOnInit() {
+
+		console.log(this.router.url); 
+
+  	  }
+
+	}
+
+								</pre>
+
+							</div>
+
+
+						</div>
+						
+						<!--
+						<p class="parrafo_article">Datos extraidos de:
+							https://www.instintoprogramador.com.mx/2021/01/ejemplo-de-obtencion-de-url-de-ruta.html
+						</p>
+						-->
+
+					</article>
+
+				</div>
+
+			</section>
+
+		</div>
+
+		<aside class="estilo_aside">
+			<div class="div_aside_01">
+				<p class="item_aside_main">enlace aside 01</p>
+				<p class="item_aside_main">enlace aside 02</p>
+				<p class="item_aside_main">enlace aside 03</p>
+				<p class="item_aside_main">enlace aside 04</p>
+				<p class="item_aside_main">enlace aside 05</p>
+				<p class="item_aside_main">enlace aside 06</p>
+				<p class="item_aside_main">enlace aside 07</p>
+				<p class="item_aside_main">enlace aside 08</p>
+				<p class="item_aside_main">enlace aside 09</p>
+				<p class="item_aside_main">enlace aside 10</p>
+			</div>
+		</aside>
+
+	</main>
+	<footer class="estilo_footer_01">
+
+		<div class="div_footer_01">
+
+			<h5>Autor : Salvador Mauricio Vilches Jerez</h5>
+			<h5>Fecha inicio proyecto : 6 de Noviembre de 2023</h5>
+			<h5>Fecha de publicación : Sin publicar </h5>
+			<p>************** ******************* **********************</p>
+			<h5>Contacto : </h5>
+			<h5>Email: salvadorvilches1972@gmail.com</h5>
+			<p>************** ******************** **********************</p>
+
+		</div>
+
+	</footer>
+
+</body>
+
+</html>
